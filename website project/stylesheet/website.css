@@ -8,4 +8,23 @@ a:hover, a:visited{
 img {
     width: 400px;
     height: 300px;
+    margin-left: 90px;
+}
+p {
+    margin-left: 50px;
+}
+ul {
+    margin-left: 40px;
+}
+
+.blue {
+    background-color: #0047AB;
+}
+
+.white {
+    background-color: #FFFF;
+}
+
+body{
+    background-color: #EDEADE;
 }
