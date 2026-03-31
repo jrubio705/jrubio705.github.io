@@ -1,0 +1,7 @@
+a:link, a:active{
+    color: black;
+}
+a:hover, a:visited{
+    color: bisque;
+}
+
