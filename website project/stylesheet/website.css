@@ -13,6 +13,7 @@ img {
 }
 p {
     margin-left: 50px;
+    margin-right: 50px;
 }
 ul {
     margin-left: 40px;
@@ -29,18 +30,17 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
     height: 200px;
+    opacity: 50%;
 }
 
 body{
     background-color: #EDEADE;
 }
 
-.transparent-img {
-    opacity: 0.5;
-}
 h1 {
  margin-left: 300px;
 }
+
 .blue_2 {
     background-color: #0047AB;
     padding-bottom: 25px;
