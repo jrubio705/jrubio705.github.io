@@ -23,8 +23,17 @@ ul {
 
 .white {
     background-color: #FFFF;
+    background-image: url(../photos/sal_coat_of_arms.png);
+    background-size: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
 }
 
 body{
     background-color: #EDEADE;
+}
+
+.transparent-img {
+    opacity: 0.5;
 }
