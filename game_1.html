@@ -29,9 +29,13 @@ tw-sidebar {
   display: none; 
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="wake-up?" tags="" position="600,200" size="100,100">[&lt;em&gt;&lt;strong&gt; Good morning, Honey!! &lt;/strong&gt;&lt;/em&gt;]
+tw-passage img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="wake-up?" tags="" position="600,200" size="100,100">[&lt;em&gt;&lt;strong&gt;(colour:red) [Good morning, Honey!!]]
 
-[&lt;em&gt; Make sure you wash up and come down for dinner &lt;/em&gt;]
+[&lt;em&gt; (colour:red)[Make sure you wash up and come down for dinner ]]
 
 
 (set: $hoursAsleep to 4)
@@ -76,14 +80,10 @@ tw-sidebar {
 (link: &quot;Do work and pay attention&quot;) [(set: $lifepoints to $lifepoints +1) (go-to: &quot;later day 1&quot;)] 
 (link: &quot;Dilly dally thoughout the day&quot;)[(set: $lifepoints to $lifepoints -1)(go-to:&quot;later day 1&quot;)]
 
-(if: $lifepoints&gt;6)
-[[start day 2|day 2]]
-
-(if: $lifepoints&gt;7)
-[[start day 3|later day 3]]
-
-(if: $lifepoints&gt;8)
-[[start day 4|dia 4]]</tw-passagedata><tw-passagedata pid="7" name="look into the mirror" tags="" position="250,375" size="100,100">&lt;img src=&quot;main/website%20project/photos/mirror.jpeg&quot;&gt;
+(if: $lifepoints&gt;6)[[start day 2|day 2]]
+(if: $lifepoints&gt;7)[[start day 3|later day 3]]
+(if: $lifepoints&gt;8)[[start day 4|dia 4]]
+</tw-passagedata><tw-passagedata pid="7" name="look into the mirror" tags="" position="250,375" size="100,100">&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/mirror.jpeg&quot;&gt;
 
 [[I look good let head out|school work?]] 
 [[I need to redo something...looking chopped|bathroom]] </tw-passagedata><tw-passagedata pid="8" name="grab breakfast" tags="" position="650,500" size="100,100">[&lt;strong&gt;&lt;u&gt;(text-colour:red)[Que vas a querer de comer mijo?]]
@@ -92,7 +92,7 @@ tw-sidebar {
 [[Solo un cafecito con pan|Eat]]
 [[No voy a comer ma|bathroom]]</tw-passagedata><tw-passagedata pid="9" name="Eat" tags="" position="500,525" size="100,100">[You sit down and eat. hablas con tu mama de que tienes que hacer en el dia and si estas preparado pere tu ulitmo dia de la prepa]
 
-[[Finish eating|bathroom]]</tw-passagedata><tw-passagedata pid="10" name="later day 1" tags="" position="475,650" size="100,100">[You are at the first day of school assymble and they tell you that you have to meet with an advisor for you post high school plans]
+[[Finish eating|bathroom]]</tw-passagedata><tw-passagedata pid="10" name="later day 1" tags="" position="475,675" size="100,100">[You are at the first day of school assymble and they tell you that you have to meet with an advisor for you post high school plans]
 
 [&lt;em&gt;(text-colour:green)[Tengo que decidir que voy hacer antes de salir de la prepa]]
 
@@ -137,19 +137,19 @@ tw-sidebar {
 
 [ &lt;strong&gt;[ You will have to figure out what major you maybe interested in, keep your grades up, work on your application, and apply]] 
 
-(set: $track to $track = 2)
+(set: $track to $track + 2)
 
 [[Go home|Back home 2]]</tw-passagedata><tw-passagedata pid="15" name="ha trabajar" tags="" position="325,900" size="100,100">[&lt;strong&gt;[Welcome to the Work track! The goal for you is to get into a job by the end of senior year to sustain yourself and family]]
 
 [ &lt;strong&gt;[ You will have to figure out what jobs you maybe interested in, figure out if they hiring, an dapply]] 
 
-(set: $track to $track = 3)
+(set: $track to $track + 3)
 
 [[Go home|Back home 2]]</tw-passagedata><tw-passagedata pid="16" name="lets learn to work" tags="" position="75,900" size="100,100">[&lt;strong&gt;[Welcome to the Trade track! The goal for you is to get into a trade school by the end of senior year]]
 
 [ &lt;strong&gt;[ You will have to figure out what trade you want to study, keep your grades up, look for trade schools near by, and apply]] 
 
-(set: $track to $track = 1)
+(set: $track to $track + 1)
 
 [[Go home|Back home 2]]</tw-passagedata><tw-passagedata pid="17" name="day 2" tags="" position="325,775" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
 
@@ -168,21 +168,190 @@ tw-sidebar {
 [What do you wanna do?]
 
 (link: &quot;Get a part-time job&quot;) [(set: $lifepoints to $lifepoints +2)+(go-to: &quot;wake-up?&quot;)] 
-(link: &quot;Voluunteer&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;wake-up?&quot;)] 
+(link: &quot;Volunteer&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;wake-up?&quot;)] 
 (link: &quot;Focus on los estudious&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;wake-up?&quot;)] 
 [[Nah I&#39;m ok and doing what I want to do|wake-up?]]</tw-passagedata><tw-passagedata pid="19" name="dia 4" tags="" position="475,850" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
 
 [You&#39;ve been called to the advisors offic again today they want to give you the oppurtunity to start some community college classes]
 
-[&lt;strong&gt;(colour:purple)[Whether you choose to do a trade school, uni, or go straight into the work force doing some dual enrollment classes is always a good idea just incase you need a plan b or if you every look into furthering you career through education]
+[&lt;strong&gt;(colour:purple)[Whether you choose to do a trade school, uni, or go straight into the work force doing some dual enrollment classes is always a good idea just incase you need a plan b or if you every look into furthering you career through education]]
 
 &lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/diploma.jpeg&quot;&gt;
 
 (link: &quot;Yeah, lets get started&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;class talk&quot;)] 
 (link: &quot;Maybe a class or two wouldn&#39;t hurt to try&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;class talk&quot;)] 
-[[Nah, I&#39;m okay with the regular high school classes|class talk]]</tw-passagedata><tw-passagedata pid="20" name="class talk" tags="" position="475,975" size="100,100">
+[[Nah, I&#39;m okay with the regular high school classes|class talk]]</tw-passagedata><tw-passagedata pid="20" name="class talk" tags="" position="475,975" size="100,100">[&lt;strong&gt; (colour:purple)[while you are here what classes have you been thinkin of taking for the coming semester?]]
 
-&lt;img src=&quot;main/website%20project/photos/class%20subject.jpeg&quot;&gt;</tw-passagedata></tw-storydata>
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/class%20subject.jpeg&quot;&gt;
+
+(link: &quot;Math&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;Night 4&quot;)] 
+(link: &quot;English&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;Night 4&quot;)] 
+(link: &quot;History&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;Night 4&quot;)] 
+(link: &quot;Science&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;Night 4&quot;)] 
+(link: &quot;Health Science&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;Night 4&quot;)] 
+(link: &quot;Public Service&quot;) [(set: $lifepoints to $lifepoints +1)+(go-to: &quot;Night 4&quot;)] 
+[[Whatever I need take boss|Night 4]]</tw-passagedata><tw-passagedata pid="21" name="Night 4" tags="" position="375,1100" size="100,100">[&lt;strong&gt;(colour:white)+(text-style:&quot;fade-in-out&quot;)[You tell your mam&amp;aacute and pap&amp;aacute about what  path you chose when you had dinner]]
+
+[&lt;strong&gt;(colour:green)[Ma I was talking to my advisor today and chose a path for after senior year]]
+[&lt;strong&gt;(colour:red)[Que bueno mijo! Que vas hacer?]]
+
+
+(if: $track is 1)[I chose to go to trade school]
+(else-if: $track is 2)[I chose to go to University]
+(else-if: $track is 3)[I chose to help you and pap&amp;aacute , and start working]
+
+[&lt;strong&gt;(colour:red)[Que bueno hijo, que dios te bendiga y te guie en tu camino]]
+
+[[Next day|wake-up]]
+</tw-passagedata><tw-passagedata pid="22" name="wake-up" tags="" position="550,1125" size="100,100">[&lt;em&gt;&lt;strong&gt;(colour:red) [Good morning, Honey!!]]
+
+[&lt;em&gt; (colour:red)[Make sure you wash up and come down for dinner]]
+
+
+(set: $hoursAsleep to 4)
+
+[You slept $hoursAsleep hours]
+
+[[Wake up |bathroom_2]]
+
+[[Roll over in bed |Sleep]]
+</tw-passagedata><tw-passagedata pid="23" name="bathroom_2" tags="" position="525,1625" size="100,100">[You get up and start getting ready for class]
+
+[[ check yourself in the mirror|look into the mirror2]] 
+[[ready to go|Track pick]] 
+[[grab breakfast]]
+</tw-passagedata><tw-passagedata pid="24" name="Sleep" tags="" position="500,1300" size="100,100">[&lt;strong&gt;&lt;u&gt;(text-colour:red)[Honey are you ready yet?]&lt;/strong&gt;&lt;/u&gt;]
+
+
+[You slept $hoursAsleep hours] 
+
+[[Sleep]] 
+[[grab breakfast_2]]
+[[bathroom_2]] 
+
+(set: $hoursAsleep to $hoursAsleep +0.5)</tw-passagedata><tw-passagedata pid="25" name="grab breakfast_2" tags="" position="400,1475" size="100,100">[&lt;strong&gt;&lt;u&gt;(text-colour:red)[Que vas a querer de comer mijo?]]
+
+[[Come huevos con jamon|Eat2]]
+[[Solo un cafecito con pan|Eat2]]
+[[No voy a comer ma|bathroom_2]]</tw-passagedata><tw-passagedata pid="26" name="Eat2" tags="" position="625,1400" size="100,100">[You sit down and eat. hablas con tu mama de que tienes que hacer en el dia and si estas preparado pere tu ulitmo dia de la prepa]
+
+[[Finish eating|bathroom_2]]</tw-passagedata><tw-passagedata pid="27" name="look into the mirror2" tags="" position="225,1475" size="100,100">&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/mirror.jpeg&quot;&gt;
+
+[[I look good let head out|Track pick]] 
+[[I need to redo something...looking chopped|bathroom_2]] </tw-passagedata><tw-passagedata pid="28" name="school work_1" tags="" position="150,1875" size="100,100">[You arrive at school.]
+
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/school.jpeg&quot;&gt;
+[what day are you continuing at school?]
+
+(if: $lifepoints&gt;10)[[start day 5|day 5_1]]
+(if: $lifepoints&gt;11)[[start day 6|day 6_1]]
+(if: $lifepoints&gt;12)[[start day 7|day 7_1]]
+(if: $lifepoints&gt;13)[[start day 7|day 8_1]]</tw-passagedata><tw-passagedata pid="29" name="Track pick" tags="" position="300,1675" size="100,100">
+(if: $track is 1)[&lt;strong&gt;(colour:purple)[You are on the University track]]
+[[Go to school|school work_1]]
+(else-if: $track is 2)[&lt;strong&gt;(colour:purple)[You are on the Work track]]
+[[Go to school|school work_2]]
+(else-if: $track is 3)[&lt;strong&gt;(colour:purple)[You are on the Trade track]]
+[[Go to school|school work_3]]
+
+
+</tw-passagedata><tw-passagedata pid="30" name="school work_2" tags="" position="500,1850" size="100,100">[You arrive at school.]
+
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/school.jpeg&quot;&gt;
+[what day are you continuing at school?]
+
+(if: $lifepoints&gt;10)[[start day 5|day 5_2]]
+(if: $lifepoints&gt;11)[[start day 6|day 6_2]]
+(if: $lifepoints&gt;12)[[start day 7|day 7_2]]</tw-passagedata><tw-passagedata pid="31" name="school work_3" tags="" position="775,1850" size="100,100">[You arrive at school.]
+
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/school.jpeg&quot;&gt;
+[what day are you continuing at school?]
+
+(if: $lifepoints&gt;10)[[start day 5|day 5_3]]
+(if: $lifepoints&gt;11)[[start day 6|day 6_3]]
+(if: $lifepoints&gt;12)[[start day 7|day 7_3]]</tw-passagedata><tw-passagedata pid="32" name="day 5_2" tags="" position="350,1950" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+
+
+[Applications are about to open in about 2 weeks and your advisor has suugested that you started you applications early]
+
+[what will you do?]
+
+(link:&quot;Start my applicatiosn early&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)]
+[[Nah I can work on them later|wake-up]]</tw-passagedata><tw-passagedata pid="33" name="day 6_2" tags="" position="475,2000" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+
+
+[&lt;strong&gt;(colour:white)+(text-style:&quot;fade-in-out&quot;)[You&#39;ve started your applications now and need to start thinking of how your going to pay for college. One thing you know you have to complete is the fafsa form?]]
+
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/application.png&quot;&gt;
+
+[Will you start it now?]
+
+(link:&quot;Yes I want to start it now so I can work with my parents to finish it, since we have to jump through some hoops&quot;)[(set: $lifepoints to $lifepoints+1)+(go-to:&quot;wake-up&quot;)
+[[Nah, I&#39;m going to be fine! I can finish it whenever as long as I can get it in before the Universities deadline|wake-up]]
+
+</tw-passagedata><tw-passagedata pid="34" name="day 7_2" tags="" position="600,1975" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+</tw-passagedata><tw-passagedata pid="35" name="day 5_3" tags="" position="600,2200" size="100,100">[you finished semester 1 let start the job search]
+[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+
+
+[&lt;strong&gt;(colour:white)+(text-style:&quot;fade-in-out&quot;)[We have to start prepping to do the job search. First step is learning how to build a good resume...]]
+
+[Are you going to start building your resume now?]
+
+(link:&quot;Yes I need tos tart now so I can get someone to look over it before startting to apply for jobs&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+[[Nah, I can do it later! Plus i can just work with my pa|wake-up]]</tw-passagedata><tw-passagedata pid="36" name="day 6_3" tags="" position="725,2200" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+
+
+[&lt;strong&gt;(colour:white)+(text-style:&quot;fade-in-out&quot;)[Now that we have our resume built and overlooked, we have to look for applications for jobs we&#39;d actually enjoy or at the very least pay well so you can support you parents]]
+
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/application.png&quot;&gt;
+
+[Do you want to start looking for job applications?]
+
+(link:&quot;Yes, I need to start making cash ASAP. &quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+[[There&#39;s plenty of time to find jobs out in the world, I&#39;ll do it later|wake-up]]
+
+</tw-passagedata><tw-passagedata pid="37" name="day 7_3" tags="" position="850,2200" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+
+[A few weeks have past and you heard back from you first call back from a company]
+
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/suit:tie.jpeg&quot;&gt;
+
+[Are you ready for the interview?]
+
+(link:&quot;Yes, I have my best dress shirt and jeans ready for it! &quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+[[Im not ready but I have to go either way...I need the job|wake-up]]</tw-passagedata><tw-passagedata pid="38" name="day 5_1" tags="" position="25,2100" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/trade%20emblem.png&quot;&gt;
+
+[&lt;strong&gt;(colour:white)+(text-style:&quot;fade-in-out&quot;)[We&#39;ve decided to go to trade school now. Now what trade do we want to look for?]
+
+(link:&quot;I want to try foing Electriction&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+(link:&quot;I heard plumbing isn&#39;t too bad&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+(link:&quot;I heard HVAC has some money making skills&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+(link:&quot;X-Ray tech could be something fun&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+(link:&quot;I&#39;ve seen my pa weld before, lets try welding&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+[[I still dont know what I want to learn in trade school|research]]</tw-passagedata><tw-passagedata pid="39" name="day 6_1" tags="" position="150,2075" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+</tw-passagedata><tw-passagedata pid="40" name="day 7_1" tags="" position="300,2075" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+</tw-passagedata><tw-passagedata pid="41" name="day 8_1" tags="" position="150,2250" size="100,100">[&lt;strong&gt;(colour:blue)[You have $lifepoints as of today]]
+
+[You&#39;ve applied to the trade school you what to go into. About 2 months has gone by and you recieved a letter in the mail with your name on it]
+&lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/letter.jpeg&quot;&gt;
+
+[You go into the kitchen where your mom is and tell her]
+
+[&lt;strong&gt;(colour:green)[Ma mire, recibi una carta de la escuela!]]
+[&lt;strong&gt;(colour:red) [Que dice mijo?]]
+[&lt;strong&gt;(colour:green)[ It says, que mi estan ofreciendo un asiento en su proxima clase para el programa que quiero hacer!!]]
+[&lt;strong&gt;(colour:red)[ Gracias a Dios mijo! Mira, te dije que tuvieras fe]]
+
+[Are you going to accept your acceptance letter?]
+
+(link:&quot;Yes!!! I will!&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+[[maybe there something else I want to do|wake-up]]</tw-passagedata><tw-passagedata pid="42" name="research" tags="" position="25,2225" size="100,100">[Since you have no idea what program you want to go into. Would you want to start to look though multiple schools portals and research their programs?}
+
+(link:&quot;Yes I need to figure out what program I want to do&quot;)[(set: $lifepoints to $lifepoints +1)+(go-to:&quot;wake-up&quot;)
+[[Nah not yet, I feel too busy|wake-up]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
