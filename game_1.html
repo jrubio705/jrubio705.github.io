@@ -247,15 +247,9 @@ tw-passage img {
 (if: $lifepoints&gt;11)[[start day 6|day 6_1]]
 (if: $lifepoints&gt;12)[[start day 7|day 7_1]]
 (if: $lifepoints&gt;13)[[start day 7|day 8_1]]</tw-passagedata><tw-passagedata pid="29" name="Track pick" tags="" position="300,1675" size="100,100">
-(if: $track is 1)[&lt;strong&gt;(colour:purple)[You are on the University track]]
-[[Go to school|school work_1]]
-(else-if: $track is 2)[&lt;strong&gt;(colour:purple)[You are on the Work track]]
-[[Go to school|school work_2]]
-(else-if: $track is 3)[&lt;strong&gt;(colour:purple)[You are on the Trade track]]
-[[Go to school|school work_3]]
-
-
-</tw-passagedata><tw-passagedata pid="30" name="school work_2" tags="" position="500,1850" size="100,100">[You arrive at school.]
+(link:&quot;You are on the Trade Track&quot;)[(go-to:&quot;school work_1&quot;)]
+(link:&quot;You are on the University Track&quot;)[(go-to:&quot;school work_2&quot;)]
+(link:&quot;You are on the Work Track&quot;)[(go-to:&quot;school work_3&quot;)]</tw-passagedata><tw-passagedata pid="30" name="school work_2" tags="" position="500,1850" size="100,100">[You arrive at school.]
 
 &lt;img src=&quot;https://github.com/jrubio705/jrubio705.github.io/blob/main/website%20project/photos/school.jpeg&quot;&gt;
 [what day are you continuing at school?]
